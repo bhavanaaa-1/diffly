@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:3000/generate";
-
+const API_URL = "https://diffly-plum.vercel.app/generate";
 const diffInput = document.getElementById("diff-input");
 const generateBtn = document.getElementById("generate-btn");
 const loading = document.getElementById("loading");
