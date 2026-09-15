@@ -55,7 +55,7 @@ Monthly total:
 
 Estimated AI cost: ~$0.10/month
 
-Live Deployment
+## Live Deployment
 
 Frontend: https://diffly-frontend.vercel.app
 
@@ -98,3 +98,17 @@ The AI integration section is deliberately specific because the assignment expli
 
 And the cost arithmetic follows the assignment's required calculation format. :contentReference[oaicite:2]{index=2}
 
+## Security
+
+The OpenRouter API key is never included in the frontend code. It is stored as `OPENROUTER_API_KEY` in the backend environment variables. The frontend only communicates with the Diffly Express backend.
+
+## Testing
+
+The application was tested locally and after deployment.
+
+- Tested the backend `/health` endpoint.
+- Tested empty Git diff validation.
+- Tested real Git diff input.
+- Tested the complete frontend → backend → OpenRouter → frontend flow.
+- Verified that the generated PR description is displayed correctly.
+- Verified that the frontend does not contain the OpenRouter API endpoint or API key.
