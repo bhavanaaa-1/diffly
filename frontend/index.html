@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diffly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Diffly</h1>
+      <p class="subtitle">
+        Turn your code changes into clear, review-ready pull requests.
+      </p>
+    </header>
+
+    <section class="input-card">
+      <label for="diff-input">Git Diff</label>
+      <p class="helper-text">Paste the output of <code>git diff</code> or a pull request patch below.</p>
+      <textarea
+        id="diff-input"
+        placeholder="Paste your git diff here..."
+        spellcheck="false"
+      ></textarea>
+      <button id="generate-btn" class="btn btn-primary" type="button">
+        Generate PR
+      </button>
+      <div id="loading" class="loading" hidden>
+        <span class="spinner"></span>
+        <span>Generating pull request description...</span>
+      </div>
+      <div id="error-area" class="error" hidden></div>
+    </section>
+
+    <section id="output-card" class="output-card" hidden>
+      <div class="output-header">
+        <h2>Generated PR</h2>
+        <button id="copy-btn" class="btn btn-secondary" type="button">
+          Copy
+        </button>
+      </div>
+      <pre id="output" class="output"></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
