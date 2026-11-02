@@ -39,7 +39,7 @@ The OpenRouter API key is stored in an environment variable using `process.env.O
 
 **Average tokens per call:** ~600 input + ~400 output
 
-**Cost per call:**
+## Cost Per Call
 
 ```text
 (600 / 1,000,000 × $0.15) + (400 / 1,000,000 × $0.60)
@@ -47,39 +47,58 @@ The OpenRouter API key is stored in an environment variable using `process.env.O
 = $0.000090 + $0.000240
 
 = $0.000330
-Expected monthly calls: 300
+```
 
-Monthly total:
+**Expected monthly calls:** 300
 
+### Monthly Total
+
+```text
 300 × $0.000330 = $0.099
+```
 
-Estimated AI cost: ~$0.10/month
+**Estimated AI Cost:** ~$0.10/month
 
-Live Deployment
+---
 
-Frontend: https://diffly-frontend.vercel.app
+## Live Deployment
 
-Backend: https://diffly-plum.vercel.app
+- **Frontend:** https://diffly-frontend.vercel.app
+- **Backend:** https://diffly-plum.vercel.app
 
-Backend Health Check
+### Backend Health Check
 
+**Endpoint:**  
 https://diffly-plum.vercel.app/health
 
 The backend returns:
 
+```json
 {
   "status": "ok"
 }
-Tech Stack
-HTML
-CSS
-JavaScript
-Node.js
-Express
-OpenRouter
-openai/gpt-4o-mini
-Vercel
-How It Works
+```
+
+---
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express
+- OpenRouter
+- openai/gpt-4o-mini
+- Vercel
+
+---
+
+## How It Works
+
+The application follows this workflow:
+
+```text
 User pastes Git diff
         ↓
 Diffly Frontend
@@ -93,8 +112,10 @@ GPT-4o-mini
 Generated PR Description
         ↓
 Diffly Frontend
+```
 
-The AI integration section is deliberately specific because the assignment explicitly asks for the **API, exact model, file, and function**. :contentReference[oaicite:1]{index=1}
+---
 
-And the cost arithmetic follows the assignment's required calculation format. :contentReference[oaicite:2]{index=2}
+The AI integration section is deliberately specific because the assignment explicitly asks for the **API, exact model, file, and function**.
 
+The cost arithmetic follows the assignment's required calculation format.
